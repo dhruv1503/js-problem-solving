@@ -14,6 +14,13 @@ function containsDuplicate(array){
         }
         
     }
+    for(const [key, value] of countMap){
+        if(value > 1){
+            hasDuplicates = true;
+            break;
+        }
+        
+    }
     return hasDuplicates;
 
 }
@@ -33,6 +40,6 @@ for(const element of array){
 return map
 }
 
-console.log((containsDuplicate([1,2,5,3])))
+console.log((containsDuplicate([1,2,5,3, 1])))
 
 module.exports = containsDuplicate;
