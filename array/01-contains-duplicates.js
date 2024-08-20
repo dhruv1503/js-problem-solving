@@ -4,16 +4,7 @@ function containsDuplicate(array){
     
     let hasDuplicates = false;
     const countMap = convertToCountMap(array)
-    // for(let key in countMap){
-    //     console.log(key)
-    // }
-    for(const key of Array.from(countMap.keys())){
-        if(countMap.get(key) > 1){
-            hasDuplicates = true;
-            break;
-        }
-        
-    }
+    
     for(const [key, value] of countMap){
         if(value > 1){
             hasDuplicates = true;
